@@ -17,8 +17,8 @@
             <h3>Sussy Curse</h3>
             <img src="./img/sussy_curse_icon.png" alt="Sussy Curse">
             <div>
-                <button onclick="decrementResult('sussyCurse')">-</button>
-                <button onclick="incrementResult('sussyCurse')">+</button>
+                <button class="minus-button">-</button>
+                <button class="plus-button">+</button>
             </div>
         </div>
 
@@ -26,8 +26,8 @@
             <h3>Future Blessing</h3>
             <img src="./img/future_blessing_icon.png" alt="Future Blessing">
             <div>
-                <button onclick="decrementResult('futureBlessing')">-</button>
-                <button onclick="incrementResult('futureBlessing')">+</button>
+                <button class="minus-button">-</button>
+                <button class="plus-button">+</button>
             </div>
         </div>
 
@@ -35,8 +35,8 @@
             <h3>Small Blessing</h3>
             <img src="./img/small_blessing_icon.png" alt="Small Blessing">
             <div>
-                <button onclick="decrementResult('smallBlessing')">-</button>
-                <button onclick="incrementResult('smallBlessing')">+</button>
+                <button class="minus-button">-</button>
+                <button class="plus-button">+</button>
             </div>
         </div>
 
@@ -44,8 +44,8 @@
             <h3>Modest Blessing</h3>
             <img src="./img/modest_blessing_icon.png" alt="Modest Blessing">
             <div>
-                <button onclick="decrementResult('modestBlessing')">-</button>
-                <button onclick="incrementResult('modestBlessing')">+</button>
+                <button class="minus-button">-</button>
+                <button class="plus-button">+</button>
             </div>
         </div>
 
@@ -53,8 +53,8 @@
             <h3>Blessing</h3>
             <img src="./img/blessing_icon.png" alt="Blessing">
             <div>
-                <button onclick="decrementResult('blessing')">-</button>
-                <button onclick="incrementResult('blessing')">+</button>
+                <button class="minus-button">-</button>
+                <button class="plus-button">+</button>
             </div>
         </div>
 
@@ -62,8 +62,8 @@
             <h3>Great Blessing</h3>
             <img src="./img/great_blessing_icon.png" alt="Great Blessing">
             <div>
-                <button onclick="decrementResult('greatBlessing')">-</button>
-                <button onclick="incrementResult('greatBlessing')">+</button>
+                <button class="minus-button">-</button>
+                <button class="plus-button">+</button>
             </div>
         </div>
     </div>
@@ -74,11 +74,11 @@
                 <tr>
                     <th>Result</th>
                     <th>Count</th>
-                    <th>Percentage (%)</th>
-                    <th>Base Probability (%)</th>
+                    <th>Percentage</th>
+                    <th>Base Probability</th>
                     <th>Junko Shards</th>
                     <th>Expected Ligma</th>
-                    <th>Credits (Million)</th>
+                    <th>Credits</th>
                 </tr>
             </thead>
             <tbody id="results-table-body">
@@ -86,7 +86,7 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td>Total</td>
+                    <td><b>Total</b></td>
                     <td id="total-count"></td>
                     <td></td> <!-- Empty column for percentage -->
                     <td></td> <!-- Empty column for base probability -->
@@ -101,7 +101,7 @@
     <!-- Probability Info & Reset Button -->
     <div id="extra-info">
         <p>There is pity for great blessing which gradually increases its probability. For more details <a href="https://bluearchive.wiki/wiki/A_Game_Before_the_New_Year%27s_Feast_%7E_One-and-Done_Match_%7E/Rerun#Omikuji" target="_blank" rel="noreferrer">click here</a>.</p>
-        <button id="reset-button" onclick="resetData()">Reset Values</button>
+        <button id="reset-button" onclick="confirmReset()">Reset Values</button>
         <img src="./img/saccphony.png">
     </div>
     </main>

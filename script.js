@@ -63,6 +63,20 @@ resultsData.forEach(result => {
     }
 });
 
+// Make icons and buttons clickable
+document.querySelectorAll('.result-control').forEach((container) => {
+    const type = container.dataset.result;
+    container.querySelector('img').addEventListener('click', () => {
+        incrementResult(type);
+    });
+    container.querySelector('div .plus-button').addEventListener('click', () => {
+        incrementResult(type);
+    });
+    container.querySelector('div .minus-button').addEventListener('click', () => {
+        decrementResult(type);
+    });
+});
+
 function updateLocalStorage() {
     resultsData.forEach(result => {
         localStorage.setItem(result.key, result.count);
@@ -90,6 +104,11 @@ function decrementResult(key) {
 }
 
 // Reset data
+function confirmReset() {
+    if (confirm('Are you sure you want to reset all values?'))
+        resetData();
+}
+
 function resetData() {
     resultsData.forEach(result => {
         result.count = 0;
