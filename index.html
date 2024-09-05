@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omikuji Counter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Omikuji Counter</h1>
+    
+    <main>
+    <div id="controls">
+        <!-- Clickable images with +/- buttons for each result -->
+        <div class="result-control" data-result="sussyCurse">
+            <h3>Sussy Curse</h3>
+            <img src="./img/sussy_curse_icon.png" alt="Sussy Curse">
+            <div>
+                <button onclick="decrementResult('sussyCurse')">-</button>
+                <button onclick="incrementResult('sussyCurse')">+</button>
+            </div>
+        </div>
+
+        <div class="result-control" data-result="futureBlessing">
+            <h3>Future Blessing</h3>
+            <img src="./img/future_blessing_icon.png" alt="Future Blessing">
+            <div>
+                <button onclick="decrementResult('futureBlessing')">-</button>
+                <button onclick="incrementResult('futureBlessing')">+</button>
+            </div>
+        </div>
+
+        <div class="result-control" data-result="smallBlessing">
+            <h3>Small Blessing</h3>
+            <img src="./img/small_blessing_icon.png" alt="Small Blessing">
+            <div>
+                <button onclick="decrementResult('smallBlessing')">-</button>
+                <button onclick="incrementResult('smallBlessing')">+</button>
+            </div>
+        </div>
+
+        <div class="result-control" data-result="modestBlessing">
+            <h3>Modest Blessing</h3>
+            <img src="./img/modest_blessing_icon.png" alt="Modest Blessing">
+            <div>
+                <button onclick="decrementResult('modestBlessing')">-</button>
+                <button onclick="incrementResult('modestBlessing')">+</button>
+            </div>
+        </div>
+
+        <div class="result-control" data-result="blessing">
+            <h3>Blessing</h3>
+            <img src="./img/blessing_icon.png" alt="Blessing">
+            <div>
+                <button onclick="decrementResult('blessing')">-</button>
+                <button onclick="incrementResult('blessing')">+</button>
+            </div>
+        </div>
+
+        <div class="result-control" data-result="greatBlessing">
+            <h3>Great Blessing</h3>
+            <img src="./img/great_blessing_icon.png" alt="Great Blessing">
+            <div>
+                <button onclick="decrementResult('greatBlessing')">-</button>
+                <button onclick="incrementResult('greatBlessing')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="result-section">
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th>Result</th>
+                    <th>Count</th>
+                    <th>Percentage (%)</th>
+                    <th>Base Probability (%)</th>
+                    <th>Junko Shards</th>
+                    <th>Expected Ligma</th>
+                    <th>Credits (Million)</th>
+                </tr>
+            </thead>
+            <tbody id="results-table-body">
+                <!-- Dynamic Content Here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td id="total-count"></td>
+                    <td></td> <!-- Empty column for percentage -->
+                    <td></td> <!-- Empty column for base probability -->
+                    <td id="total-junko-shards"></td>
+                    <td id="total-expected-ligma"></td>
+                    <td id="total-credits"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- Probability Info & Reset Button -->
+    <div id="extra-info">
+        <p>There is pity for great blessing which gradually increases its probability. For more details <a href="https://bluearchive.wiki/wiki/A_Game_Before_the_New_Year%27s_Feast_%7E_One-and-Done_Match_%7E/Rerun#Omikuji" target="_blank" rel="noreferrer">click here</a>.</p>
+        <button id="reset-button" onclick="resetData()">Reset Values</button>
+        <img src="./img/saccphony.png">
+    </div>
+    </main>
+</body>
+</html>
