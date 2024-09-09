@@ -27,6 +27,12 @@ h1 {
     align-items: center;
 }
 
+.result-control .captions {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 20px 0px;
+}
+
 .result-control img {
     width: max(min(10vw, 28vh), 90px);
     height: max(min(10vw, 28vh), 90px);
